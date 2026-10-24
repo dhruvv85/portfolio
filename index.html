@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Rana | Biotechnology & Computational Biology Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand Logo / Name -->
+                <a href="#hero" class="text-xl font-bold text-slate-900 bg-slate-100 px-3 py-1 rounded-lg hover:bg-white transition">
+                    Dhruv Rana
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-slate-300 hover:text-blue-400 transition">About</a>
+                    <a href="#skills" class="text-slate-300 hover:text-blue-400 transition">Skills</a>
+                    <a href="#projects" class="text-slate-300 hover:text-blue-400 transition">Projects</a>
+                    <a href="#education" class="text-slate-300 hover:text-blue-400 transition">Education</a>
+                    <a href="#contact" class="text-slate-300 hover:text-blue-400 transition">Contact</a>
+                </nav>
+
+                <!-- Mobile Navigation Toggle Button -->
+                <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Skills</a>
+            <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Projects</a>
+            <a href="#education" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Education</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
+            <!-- Subtle Radial Gradient Background Effect -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900 to-slate-900 pointer-events-none"></div>
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-400 text-xs sm:text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                    1st Year Biotechnology Student • Dehradun, Uttarakhand
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
+                    Hi, I'm <span class="bg-slate-100 text-slate-950 px-4 py-1 rounded-xl shadow-lg border border-slate-300 inline-block my-1">Dhruv Rana</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed mb-8">
+                    First-Year B.Tech Biotechnology student at LPU exploring the intersection of <span class="text-blue-400 font-normal">Artificial Intelligence</span>, <span class="text-indigo-400 font-normal">Python Programming</span>, and biological research.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#projects" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition shadow-lg shadow-blue-600/30 flex items-center gap-2">
+                        <span>View Projects</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#contact" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium transition flex items-center gap-2">
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-slate-800/40 border-y border-slate-800/60">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-3">About Me</h2>
+                    <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 bg-slate-800/80 p-6 sm:p-8 rounded-2xl border border-slate-700/60 shadow-xl">
+                        <p class="text-slate-300 leading-relaxed mb-4">
+                            I am a <strong>1st Year B.Tech Biotechnology</strong> student at <strong>Lovely Professional University</strong>, originally from <strong>Dehradun, Uttarakhand, India</strong>. I have a strong drive to transform traditional biological research using computational tools right from the start of my academic journey.
+                        </p>
+                        <p class="text-slate-300 leading-relaxed mb-4">
+                            My future goal is to pursue an <strong>M.Tech in Bioinformatics</strong>. I am actively expanding my skillset in <strong>Python</strong>, machine learning pipelines, and data analytics to decode biological data, understand drug interactions, and build modern healthcare solutions.
+                        </p>
+                        <p class="text-slate-300 leading-relaxed">
+                            Whether it's studying hydrocolloids in cosmetic formulations or researching deep learning applications for healthcare, I aim to create impactful research at the intersection of life sciences and technology.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-4 space-y-4">
+                        <div class="bg-blue-950/40 border border-blue-800/40 p-5 rounded-xl">
+                            <i class="fa-solid fa-graduation-cap text-2xl text-blue-400 mb-2"></i>
+                            <h3 class="text-white font-semibold mb-1">Education & Year</h3>
+                            <p class="text-slate-400 text-sm">1st Year, B.Tech in Biotechnology</p>
+                            <p class="text-slate-400 text-sm">Lovely Professional University</p>
+                        </div>
+                        <div class="bg-slate-900/60 border border-slate-700/50 p-5 rounded-xl">
+                            <i class="fa-solid fa-location-dot text-2xl text-rose-400 mb-2"></i>
+                            <h3 class="text-white font-semibold mb-1">Hometown</h3>
+                            <p class="text-slate-400 text-sm">Dehradun, Uttarakhand, India</p>
+                        </div>
+                        <div class="bg-indigo-950/40 border border-indigo-800/40 p-5 rounded-xl">
+                            <i class="fa-solid fa-bullseye text-2xl text-indigo-400 mb-2"></i>
+                            <h3 class="text-white font-semibold mb-1">Future Focus</h3>
+                            <p class="text-slate-400 text-sm">M.Tech Bioinformatics & AI in Drug Discovery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-3">Skills & Domains</h2>
+                    <p class="text-slate-400 text-sm">Technical competencies and academic focus areas</p>
+                    <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full mt-3"></div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Skill Card 1 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl hover:border-blue-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Python Programming</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-3">Currently mastering Python core concepts, libraries, and scripting for biological data processing.</p>
+                        <span class="inline-block px-2.5 py-1 rounded bg-blue-950/80 text-blue-400 text-xs font-medium border border-blue-800/40">Actively Learning</span>
+                    </div>
+
+                    <!-- Skill Card 2 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl hover:border-blue-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-dna"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Computational Biology</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Understanding bio-algorithms, sequence alignment fundamentals, and quantitative bio-analysis.</p>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl hover:border-blue-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">AI & ML in Healthcare</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Studying machine learning applications in drug discovery and biological image/sequence analytics.</p>
+                    </div>
+
+                    <!-- Skill Card 4 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl hover:border-blue-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Biotech Foundations</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Strong principles in microbiology, molecular biology, biochemistry, and bioprocess engineering.</p>
+                    </div>
+
+                    <!-- Skill Card 5 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl hover:border-blue-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Data Analysis</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Exploring methods to structure, interpret, and present experimental and biological datasets.</p>
+                    </div>
+
+                    <!-- Skill Card 6 -->
+                    <div class="bg-slate-800/60 border border-slate-700/60 p-6 rounded-xl hover:border-blue-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Cosmetic Formulation</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Rheological characterization and hydrocolloid applications in topical & skincare formulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-slate-800/40 border-y border-slate-800/60">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-3">Featured Projects</h2>
+                    <p class="text-slate-400 text-sm">Key academic studies and technical exploration</p>
+                    <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full mt-3"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/40 transition duration-300 flex flex-col justify-between">
+                        <div class="p-6 sm:p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-400 text-xs font-medium border border-cyan-800/40">
+                                    Natural Hydrocolloids
+                                </span>
+                                <i class="fa-solid fa-[#00b4d8] fa-seedling text-slate-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3 hover:text-blue-400 transition">
+                                Chia Seed Mucilage: Functional Properties & Cosmetic Applications
+                            </h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Explored cosmetic formulation techniques, rheological behavior, and natural hydrocolloid extraction from chia seeds for sustainable topical applications in modern skincare.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Biomaterials</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Rheology</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Formulation Science</span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 bg-slate-950/60 border-t border-slate-800 text-xs text-slate-400 flex justify-between items-center">
+                            <span>Academic Research</span>
+                            <i class="fa-solid fa-vial text-blue-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/40 transition duration-300 flex flex-col justify-between">
+                        <div class="p-6 sm:p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-full bg-indigo-950 text-indigo-400 text-xs font-medium border border-indigo-800/40">
+                                    AI & Data Science
+                                </span>
+                                <i class="fa-solid fa-brain text-slate-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3 hover:text-blue-400 transition">
+                                AI Applications in Healthcare & Biotech Research
+                            </h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Analyzed deep learning frameworks, drug-target interaction predictive models, and computational machine learning pipelines in advancing modern precision medicine.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Python</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Machine Learning</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs">Drug Interactions</span>
+                            </div>
+                        </div>
+                        <div class="px-6 py-4 bg-slate-950/60 border-t border-slate-800 text-xs text-slate-400 flex justify-between items-center">
+                            <span>Literature Study & ML Modeling</span>
+                            <i class="fa-solid fa-network-wired text-indigo-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-3">Education</h2>
+                    <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto bg-slate-800/50 border border-slate-700/60 p-6 sm:p-8 rounded-2xl relative">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Bachelor of Technology (B.Tech) in Biotechnology</h3>
+                            <p class="text-blue-400 font-medium">Lovely Professional University</p>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-blue-950 text-blue-300 text-xs font-semibold border border-blue-800/40">
+                            1st Year Student
+                        </span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                        Currently in 1st year, focusing on core biological fundamentals, foundational mathematics, bioinformatics principles, molecular biology, and Python programming for computational applications.
+                    </p>
+                    <p class="text-slate-400 text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-location-dot text-rose-400"></i>
+                        <span>Hometown: Dehradun, Uttarakhand, India</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-800/40 border-t border-slate-800/60">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-white mb-3">Get In Touch</h2>
+                <p class="text-slate-400 max-w-lg mx-auto text-sm mb-10">
+                    I am always open to research discussions, collaborative projects in computational biology, or learning opportunities. Feel free to connect!
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-6 max-w-xl mx-auto mb-10">
+                    <!-- Email Card -->
+                    <a href="mailto:dhruvrana1245@gmail.com" class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-blue-500/50 transition flex flex-col items-center group">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-3 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 uppercase tracking-wider mb-1">Email Me</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-blue-400 transition">dhruvrana1245@gmail.com</span>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/dhruv-rana-727a8243a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-blue-500/50 transition flex flex-col items-center group">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-3 group-hover:scale-110 transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <span class="text-xs text-slate-400 uppercase tracking-wider mb-1">Connect On</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-blue-400 transition">LinkedIn Profile</span>
+                    </a>
+                </div>
+
+                <!-- Contact Message Form Simulation -->
+                <form id="contact-form" class="max-w-xl mx-auto bg-slate-900 p-6 rounded-2xl border border-slate-800 text-left space-y-4">
+                    <div>
+                        <label for="name" class="block text-xs font-medium text-slate-400 mb-1">Your Name</label>
+                        <input type="text" id="name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-xs font-medium text-slate-400 mb-1">Your Email</label>
+                        <input type="email" id="email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs font-medium text-slate-400 mb-1">Message</label>
+                        <textarea id="message" rows="4" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Write your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition shadow-lg shadow-blue-600/30">
+                        Send Message
+                    </button>
+                    <!-- Form Status Box -->
+                    <div id="form-status" class="hidden p-3 rounded-lg text-sm text-center"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 text-slate-500 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>© <span id="year"></span> Dhruv Rana. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Display simulated success notification
+            formStatus.classList.remove('hidden', 'bg-red-900/50', 'text-red-300');
+            formStatus.classList.add('bg-blue-900/50', 'text-blue-300', 'border', 'border-blue-700');
+            formStatus.textContent = 'Thank you for reaching out! Your message has been simulated successfully.';
+
+            contactForm.reset();
+
+            setTimeout(() => {
+                formStatus.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
